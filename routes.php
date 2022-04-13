@@ -28,7 +28,7 @@ switch ($request) {
         try {
             require __DIR__ . '/public/index.php';
         } catch (Exception $e) {
-            require __DIR__ . '/logs.php';
+            require __DIR__ . '/views/logs.php';
             // echo $e->getMessage() . '</br>';
             // print_r($e);
         }
@@ -37,7 +37,7 @@ switch ($request) {
         try {
             require __DIR__ . '/public/index.php';
         } catch (Exception $e) {
-            require __DIR__ . '/logs.php';
+            require __DIR__ . '/views/logs.php';
             // echo $e->getMessage() . '</br>';
             // print_r($e);
         }
