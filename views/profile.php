@@ -1,5 +1,5 @@
 <?php include('components/header_1.php');
-include('models/student/getFromStudent.php');
+// include('models/student/getFromStudent.php');
 include('models/club/getFromClub.php');
 include('models/join/getFromJoin.php');
 include('controllers/club/string_control.php');

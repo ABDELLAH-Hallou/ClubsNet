@@ -20,7 +20,7 @@ foreach ($clubsName as $clubname) {
   $names_arr[$i]['members'] = $clubname['members'];
   $i++;
 }
-file_put_contents('views/data.json', json_encode($names_arr));
+file_put_contents(__DIR__.'/views/data.json', json_encode($names_arr));
 ?>
 
 <div class="container-fluid">
