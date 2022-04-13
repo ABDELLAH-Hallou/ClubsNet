@@ -1,6 +1,7 @@
 <?php
 include('components/header_1.php');
 include('models/club/getFromClub.php');
+
 include('models/student/getFromStudent.php');
 include('controllers/club/string_control.php');
 $clubs_array = array_slice(getAllClubs($db), 0,3);
