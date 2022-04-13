@@ -28,16 +28,18 @@ switch ($request) {
         try {
             require __DIR__ . '/public/index.php';
         } catch (Exception $e) {
-            echo $e->getMessage() . '</br>';
-            print_r($e);
+            require __DIR__ . '/logs.php';
+            // echo $e->getMessage() . '</br>';
+            // print_r($e);
         }
         break;
     case '':
         try {
             require __DIR__ . '/public/index.php';
         } catch (Exception $e) {
-            echo $e->getMessage() . '</br>';
-            print_r($e);
+            require __DIR__ . '/logs.php';
+            // echo $e->getMessage() . '</br>';
+            // print_r($e);
         }
         break;
         // login
