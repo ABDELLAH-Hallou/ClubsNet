@@ -1,7 +1,8 @@
 <?php
 include('config/db_connect.php');
-session_start();
 include('models/student/getFromStudent.php');
+session_start();
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -62,7 +63,14 @@ include('models/student/getFromStudent.php');
                         <li class="nav-item">
                             <a class="nav-link" href="/new-club">Create New Club</a>
                         </li>
-                    <?php
+
+                        <?php
+                                $whoAmI = getStudent($db, $_SESSION["id"]);
+                                if ($whoAmI['email'] == 'admin@admin.com') { ?>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/dashboard">Dashboard</a>
+                            </li>
+                    <?php }
                             } ?>
 
 
