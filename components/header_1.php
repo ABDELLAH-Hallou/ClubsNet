@@ -1,7 +1,7 @@
 <?php
 include('config/db_connect.php');
 session_start();
-// include('models/student/getFromStudent.php');
+include('models/student/getFromStudent.php');
 ?>
 <!DOCTYPE html>
 <html>
