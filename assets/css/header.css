@@ -1,0 +1,79 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.navbar-light .navbar-toggler {
+  color: rgb(255 255 255);
+  border-color: rgb(255 255 255);
+}
+.navbar {
+  padding: 1rem 1.2rem;
+}
+.navbar .container-fluid {
+  margin: 0 3rem;
+}
+.navbar .container-fluid .navbar-brand {
+  color: white;
+  transform: translateX(10%);
+  font-size: 2rem;
+  font-family: "Fredoka One", cursive;
+}
+.navbar .container-fluid div .navbar-nav .nav-item {
+  padding: 0 1.5rem;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.navbar .container-fluid div .navbar-nav .nav-item a {
+  color: white;
+}
+.navbar .container-fluid div .btn1 {
+  font-family: "Ubuntu", sans-serif;
+  transform: translateX(50%);
+  margin-left: 1px;
+}
+.navbar .container-fluid .collapse .user{
+  color: white;  text-decoration: none;
+}
+
+.sticky {
+  background-color: white;
+}
+.sticky .container-fluid .navbar-brand {
+  color: #00022e;
+}
+.sticky .container-fluid .collapse .navbar-nav .nav-item .nav-link {
+  color: #00022e;
+}
+.sticky .container-fluid .collapse .user{
+    color: #00022e;
+}
+.sticky .container-fluid .btn1 {
+  color: #00022e;
+  font-size: 1.2rem;
+  border: 0.5px solid #00022e;
+  border-radius: 30px;
+  transition: all 0.5s;
+}
+.sticky .container-fluid .btn1:hover {
+  background-color: #00022e;
+  color: white;
+  border-color: white;
+}
+
+li .dropdown-menu{
+  background-color: white;
+}
+li .dropdown-menu .dropdown-item{
+  color: black !important;
+}
+@media all and (max-width: 991px) {
+  .navbar .container-fluid {
+    margin: 0 0.5rem;
+  }
+  
+  /*.navbar .container-fluid .btn1 {
+     margin-left: -23px; 
+  }*/
+}/*# sourceMappingURL=style.css.map */

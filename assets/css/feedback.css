@@ -1,0 +1,46 @@
+.tab-pane{
+    color: black;
+}
+.modal-header {
+    color: white;
+    background-color: #007bff
+}
+.rating-section div input{
+    visibility:hidden;
+}
+.rating-section div label{
+    border-color: #00022e !important;
+    color: black !important;
+}
+.rating-section div label:hover{
+    background-color: #00022e !important;
+    color: #fff !important;
+}
+.rating-section div input:checked + label{
+    /* background-color: #007bff !important; */
+    background-color: #1a018a !important;
+    border: 0;
+    color: #fff !important;
+}
+.text-feedback {
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0) !important;
+    outline: none;
+    margin: 6px;
+    padding: 6px;
+    width: 97%;
+}
+.text-feedback:focus{
+    border-bottom: 2px solid rgba(38, 0, 255, 1) !important;
+}
+.modal-footer .btn{
+    width: 15% !important;
+}
+.form-check input {
+    color: #007bff
+}
+@media all and (max-width: 991px) {
+    .modal-footer .btn{
+        width: 25% !important;
+    }
+}

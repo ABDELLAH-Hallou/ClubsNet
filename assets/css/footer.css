@@ -1,0 +1,59 @@
+/* footer */
+.footer_area .container{
+    border-top:1px solid lightgray;
+    padding-top: 50px;
+}
+.footer_area {
+
+}
+.f_title {
+    margin-bottom: 35px;
+}
+.f_title h3 {
+    color: #00022e;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Heebo", sans-serif;
+    margin-bottom: 0;
+}
+.ab_widget p {
+    font-size: 14px;
+    line-height: 24px;
+    font-family: "Roboto", sans-serif;
+    color: #7b7b7b;
+    margin-bottom: 30px;
+}
+.link-footer {
+    color: #525151;
+    text-transform: capitalize;
+}
+.size-16 {
+    font-size: 16px;
+}
+.size-22 {
+    font-size: 22px;
+}
+.icn {
+    display: inline-block;
+    width: .8em;
+    height: .8em;
+    fill: currentColor;
+}
+.list li {
+    margin-right: 17px;
+    display: inline-block;
+}
+.list li a svg{
+    color:#00022e;
+}
+body > footer > div > div > div.col-lg-2 > aside > ul > li:nth-child(2) > a{
+    color :#00022e;
+}
+
+.container .row div{
+    margin-bottom: 2rem;
+}
+footer .container .row div aside p{
+    text-align: justify;
+    text-justify: inter-word;
+}

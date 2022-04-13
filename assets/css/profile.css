@@ -1,0 +1,448 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+
+.navbar {
+  background-color: #00022e !important;
+  padding: 1rem 1.2rem;
+}
+.navbar .container-fluid {
+  margin: 0 3rem;
+}
+.navbar .container-fluid .navbar-brand {
+  color: white !important;
+  transform: translateX(10%);
+  font-size: 2rem;
+  font-family: "Fredoka One", cursive;
+}
+.navbar .container-fluid div .navbar-nav .nav-item {
+  padding: 0 1.5rem;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.navbar .container-fluid div .navbar-nav .nav-item a {
+  color: white ;
+}
+.navbar .container-fluid div .btn1 {
+  font-family: "Ubuntu", sans-serif;
+  transform: translateX(50%);
+}
+
+.btn1 {
+  font-family: "Ubuntu", sans-serif;
+  color: white;
+  font-size: 1.2rem;
+  border: 0.5px solid white;
+  border-radius: 30px;
+  transition: all 0.5s;
+}
+.btn1:hover {
+  background-color: white;
+  color: #00022e;
+  border-color: #00022e;
+}
+li .dropdown-menu{
+    background-color: white;
+  }
+  li .dropdown-menu a.dropdown-item{
+    color: black !important;
+  }
+@media all and (max-width: 991px) {
+  .navbar .container-fluid {
+    margin: 0 0.5rem;
+  }
+  /*.navbar .container-fluid .btn1 {
+     margin-left: -23px; 
+  }*/
+}/*# sourceMappingURL=style.css.map */
+
+
+.btn1 {
+  font-family: "Ubuntu", sans-serif;
+  color: white;
+  font-size: 1.2rem;
+  border: 0.5px solid white;
+  border-radius: 30px;
+  transition: all 0.5s;
+}
+.btn1:hover {
+  background-color: white;
+  color: #00022e;
+  border-color: #00022e;
+}
+
+.btn2 {
+  font-family: "Ubuntu", sans-serif;
+  background-color: white;
+  width: 30%;
+  color: #00022e;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  border: 0.5px solid #00022e;
+  transition: all 0.5s;
+}
+.btn2:hover {
+  background-color: #00022e;
+  color: white;
+  border-color: white;
+}
+
+.btn3 {
+  font-family: "Ubuntu", sans-serif;
+  background-color: white;
+  width: 10% !important;
+  color: #00022e;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  border: 0.5px solid #00022e;
+  transition: all 0.5s;
+
+
+}
+.btn3:hover {
+  background-color: #ff8800;
+  color: white;
+  border-color: white;
+}
+
+.profile {
+    margin-top: 5%;
+}
+
+.profile .container-fluid {
+    height: 16rem;
+    background-repeat: no-repeat;
+  background-size: contain;
+    background-image: url(../images/coverensam.png);
+
+}
+
+.profile .container-fluid .prof {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    transform: translateY(50%);
+    margin-left: 3%;
+}
+
+.profile .container-fluid .prof img {
+    border-radius: 50%;
+    background-color: white;
+    justify-content: center;
+    width: 260px;
+    height: 260px;
+}
+
+.profile .container-fluid .prof .media-body {
+    align-self: flex-end;
+}
+
+.profile .container-fluid .prof .media-body h2 {
+    margin-bottom: 0;
+}
+
+
+.btn2 {
+    font-family: "Ubuntu", sans-serif;
+    background-color: white;
+    width: 30%;
+    color: #00022e;
+    font-size: 1.2rem;
+    border: 0.5px solid #00022e;
+    transition: all 0.5s;
+}
+
+.btn2:hover {
+    background-color: #00022e;
+    color: white;
+    border-color: white;
+}
+
+.contain {
+    margin-top: 10%;
+}
+
+.Clubs {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Clubs .Club {
+
+    display: flex;
+    flex-direction: row;
+    padding: 1%;
+    border: 1px solid lightgray;
+    border-left: none;
+    border-right: none;
+
+}
+
+
+.Clubs .Club .part-1 img {
+    border-radius: 2%;
+    width: 22vw;
+    height: 100%;
+
+}
+
+.Clubs .Club .part-2 {
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+}
+
+.Clubs .Club .part-2 .price {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.Clubs .Club .part-2 .description {
+    width: 40vw;
+}
+
+.Clubs .Club .part-2 .description .club-description {
+    width: 80%;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 0.5%;
+}
+
+.Clubs .Club .part-2 .description h4 {
+
+    width: 80%;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 0.5%;
+}
+
+.Clubs .Club .part-2 .description h4 a {
+    color: #00022e
+}
+
+.Clubs .Club .part-2 .description h6 {
+    color: #b4690e;
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-bottom: 0.5%;
+}
+
+.Clubs .Club .part-2 .description .text-secondary {
+    margin-bottom: 0.5%;
+    font-size: 1rem;
+}
+
+.tab {
+
+    margin-top: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: 1px none #d4d4d6;
+    border-bottom-style: solid;
+    width: 70vw;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    border: none ;
+
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #d4d4d6;
+
+}
+
+.personal_info {
+    margin-top: 5%;
+
+}
+
+.personal_info .unpair {
+    background-color: #ddd;
+}
+
+.personal_info .row {
+    margin-left: 15%;
+    padding: 1%;
+    font-size: 1.2rem;
+    width: 70vw;
+}
+
+.personal_info .row .label {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.update-input,.update{
+    display:none;
+}
+textarea{
+    font-size: 14px;
+    width: 100%;
+    min-width: 100%;
+    min-height: 120px;
+    height: 16em ;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    padding: 1%;
+}
+.hvr-grow {
+	display: inline;
+    width: 70%;
+    margin: 0 auto 0 auto;
+	vertical-align: middle;
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	transition-duration: 0.3s;
+	transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+	transform: scale(1.05);
+}
+@media all and (max-width: 991px) {
+    
+    .personal_info .row {
+    font-size: 0.8rem;
+    width: 75vw;
+}
+    .profile .container-fluid .prof img {
+
+        width: 200px;
+        height: 200px;
+    }
+
+    .profile .container-fluid {
+        margin-top: -3rem;
+        height: 40vh;
+        background: none;
+    }
+
+    .profile .container-fluid .prof {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        transform: translateY(50%);
+
+    }
+
+    .profile .container-fluid .prof .media-body {
+        margin-right: auto;
+    }
+
+    .contain {
+        margin-top: 23%;
+    }
+
+
+    .Clubs .Club {
+        width: 100%;
+        height: max-content;
+    }
+
+    .Clubs .Club .part-1 img {
+        border-radius: 2%;
+        width: 32vw;
+        /* height: 16vh; */
+        /* transform: translateX(-25%); */
+    }
+
+    .Clubs .Club .part-2 {
+        display: flex;
+        flex-direction: row;
+
+        text-align: start;
+    }
+
+    .Clubs .Club .part-2 .price {
+        font-size: 1.2rem;
+
+    }
+    .Clubs .Club .part-2 .description {
+        margin-left: 10%;
+    }
+    .Clubs .Club .part-2 .description h6 {
+
+        font-size: 0.9rem;
+        margin-bottom: 0;
+    }
+
+    .Clubs .Club .part-2 .description .text-secondary {
+        margin-bottom: -0.54%;
+        font-size: 0.8rem;
+    }
+
+    .Clubs .Club .part-2 .description h4 {
+        font-size: 1rem;
+        margin-bottom: -0.54%;
+    }
+
+    .Clubs .Club .part-2 .description .club-description {
+        font-size: 0.7rem;
+    }
+
+    .Clubs .Club .part-2 .description .text-secondary {
+        margin-bottom: 0.5%;
+        font-size: 0.6rem;
+    }
+
+
+}
+@media all and (max-width: 1024px) {
+    .Clubs .Club .part-2 .description {
+        margin-left: 20%;
+    }
+}
+@media all and (max-width: 1240px) {
+    .Clubs .Club .part-2 .description {
+        margin-left: 30%;
+    }
+}
+@media all and (max-width: 720px) {
+    .contain {
+        margin-top: 45%;
+    }
+}

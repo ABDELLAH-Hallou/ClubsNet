@@ -1,0 +1,279 @@
+.main {
+  background-image: url(../images/Ecus_Sleep-Gradient-Background.jpg);
+  background-size: cover;
+  height: 40rem;
+  position: relative;
+}
+.main .custom-shape-divider-top-1613908015 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+.main .custom-shape-divider-top-1613908015 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 35px;
+  transform: rotateY(180deg);
+}
+.main .custom-shape-divider-top-1613908015 .shape-fill {
+  fill: #FFFFFF;
+}
+.main .container {
+  transform: translateY(10%);
+}
+.main .container .row .col1 {
+  color: white;
+}
+.main .container .row .col1 h2 {
+
+  font-family: "Ubuntu", sans-serif;
+}
+.main .container .row .col1 p {
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+.main .custom-shape-divider-bottom-1613919420 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+.main .custom-shape-divider-bottom-1613919420 svg {
+  position: relative;
+  display: block;
+  width: calc(137% + 1.3px);
+  height: 105px;
+}
+.main .custom-shape-divider-bottom-1613919420 .shape-fill {
+  fill: #FFFFFF;
+}
+
+.main-2 {
+  height: 31rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-2 .container .row {
+  text-align: center;
+}
+.main-2 .container .row .col1 {
+  order: 2;
+}
+.main-2 .container .row .col1 h2 {
+  font-family: "Ubuntu", sans-serif;
+}
+.main-2 .container .row .col1 p {
+  font-family: "Roboto", sans-serif;
+}
+.main-2 .container .row div {
+  order: 1;
+}
+
+.main-3 {
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-3 .container .row {
+  text-align: center;
+}
+.main-3 .container .row .col1 {
+  order: 1;
+}
+.main-3 .container .row .col1 h2 {
+  font-family: "Ubuntu", sans-serif;
+}
+.main-3 .container .row .col1 p {
+  font-family: "Roboto", sans-serif;
+}
+.main-3 .container .row div {
+  order: 2;
+}
+
+
+
+.btn1 {
+  font-family: "Ubuntu", sans-serif;
+  color: white;
+  font-size: 1.2rem;
+  border: 0.5px solid white;
+  border-radius: 30px;
+  transition: all 0.5s;
+}
+.btn1:hover {
+  background-color: white;
+  color: #00022e;
+  border-color: #00022e;
+}
+
+.btn2 {
+  font-family: "Ubuntu", sans-serif;
+  background-color: white;
+  width: 30%;
+  color: #00022e;
+  font-size: 1.2rem;
+  border: 0.5px solid #00022e;
+  transition: all 0.5s;
+}
+.btn2:hover {
+  background-color: #00022e;
+  color: white;
+  border-color: white;
+}
+
+.btn3 {
+  color: white;
+  border: 0.5px solid white;
+  margin-top: 3%;
+  width: 30%;
+  height: 6vh;
+
+
+}
+.btn3:hover {
+  background-color: white;
+  color: #00022e;
+  border-color: #00022e;
+}
+.segments .img-fluid {
+  height: 53% !important;
+}
+
+.segments {
+  margin-bottom: 0%;
+}
+.segments .container {
+  text-align: center;
+  text-transform: uppercase;
+}
+.segments .container .row .col {
+  transform: scale(0.7);
+  box-shadow: -2px 0px 10px 3px rgba(166, 149, 149, 0.75);
+  -webkit-box-shadow: -2px 0px 10px 3px rgba(166, 149, 149, 0.75);
+  -moz-box-shadow: -2px 0px 10px 3px rgba(166, 149, 149, 0.75);
+  border-radius: 20px;
+}
+.segments .container .row .col img {
+  transform: scale(0.8);
+  border-radius: 50%;
+}
+.segments .container .row .col h4 {
+  margin-bottom: 10%;
+}
+.segments .container .row .col2 {
+  transform: scale(0.8);
+}
+
+.laptop {
+  text-transform: uppercase;
+  background-image: url(../images/Divi-Community-Update-May-2020-scaled-1.jpeg);
+  background-attachment: fixed;
+  background-size: cover;
+  height: 80vh;
+  position: relative;
+}
+.laptop .overlay {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #00000073;
+  z-index: 1;
+}
+.laptop .txt {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.laptop .txt .heading {
+  z-index: 2;
+  text-align: center;
+  position: absolute;
+  color: white;
+  top: 40%;
+}
+
+.join {
+  text-transform: uppercase;
+  background-image: url(../images/39632.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  height: 80vh;
+  position: relative;
+}
+.join .overlay {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #00000073;
+  z-index: 1;
+}
+.join .txt {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.join .txt .heading {
+  z-index: 2;
+  text-align: center;
+  position: absolute;
+  color: white;
+  top: 40%;
+}
+
+
+@media all and (max-width: 991px) {
+  .main {
+    height: 200%;
+    text-align: center;
+  }
+  .main .container .row {
+    margin-top: 3rem;
+    transform: translateY(-20%);
+  }
+  .main .container .row .col1 {
+    order: 2;
+  }
+  .main .container .row img {
+    transform: scale(0.7);
+    order: 1;
+  }
+  .main .custom-shape-divider-bottom-1613919420 {
+    transform: translateY(32%);
+  }
+
+  .main-2 {
+    text-align: center;
+    height: 50rem;
+  }
+  .main-3 {
+    text-align: center;
+    height: 40rem;
+  }
+
+  .segments .container .row .col {
+    transform: scale(0.8);
+    margin-bottom: -3rem;
+  }
+  .laptop {
+    height: 40rem;
+  }
+  .laptop .txt .heading {
+    top: 10%;
+  }
+
+  .join {
+    height: 40rem;
+  }
+}

@@ -1,0 +1,10 @@
+{
+    "require": {
+        "PHP": "8.0.*",
+        "cloudinary/cloudinary_php": "^2"
+    },
+    "post-install-cmd": [
+        "php artisan clear-compiled",
+        "chmod -R 777 public/"
+    ]
+}
