@@ -263,11 +263,11 @@
     transform: translateY(32%);
   }
   .main-3 .container .row .col1 {
-    order: 2;
+    order: 1;
   
   }
   .main-3 .img-fluid {
-    transform: scale(1.2) !important;
+    transform: scale(1.3) !important;
   }
   .main-2 {
     text-align: center;
