@@ -266,6 +266,9 @@
     order: 2 !important;
   
   }
+  .main-3 .container .row div {
+    order: 1 !important;
+  }
   .main-3 .img-fluid {
     transform: scale(1.3) !important;
   }
