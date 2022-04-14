@@ -235,9 +235,9 @@
   color: white;
   top: 40%;
 }
-.segments .container .col.col1:last-child {
+/* .segments .container .col.col1:last-child {
   height: 35rem;
-}
+} */
 
 @media all and (max-width: 991px) {
   .main {
@@ -276,13 +276,13 @@
   }
   .segments {
     margin-bottom: 0rem;
-    height: 78rem;
+    height: 87rem;
   }
   .segments .img-fluid {
     height: 33% !important;
   }
   .segments .container .col.col1{
-    max-height: 33rem;
+    height: 33rem;
   }
   .segments .container .row .col {
     transform: scale(0.8);
