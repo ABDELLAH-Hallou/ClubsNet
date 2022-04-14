@@ -1,5 +1,5 @@
 .main {
-  background-image: url(../images/Ecus_Sleep-Gradient-Background.jpg);
+  background-image: url(../images/main\ background.jpg);
   background-size: cover;
   height: 40rem;
   position: relative;
@@ -148,11 +148,15 @@
 }
 
 .segments {
-  margin-bottom: 0%;
+  margin-bottom: 0rem;
 }
 .segments .container {
   text-align: center;
-  text-transform: uppercase;
+  text-transform: unset;
+}
+.segments .container .col p {
+  font-family: 'Ubuntu';
+  font-size: larger;
 }
 .segments .container .row .col {
   transform: scale(0.7);
@@ -231,7 +235,9 @@
   color: white;
   top: 40%;
 }
-
+.segments .container .col.col1:last-child {
+  height: 35rem;
+}
 
 @media all and (max-width: 991px) {
   .main {
@@ -243,28 +249,44 @@
     transform: translateY(-20%);
   }
   .main .container .row .col1 {
-    order: 2;
+    margin-top: 5rem;
+    order: 1;
   }
   .main .container .row img {
-    transform: scale(0.7);
-    order: 1;
+    transform: scale(0.9);
+    order: 2;
   }
   .main .custom-shape-divider-bottom-1613919420 {
     transform: translateY(32%);
   }
-
-  .main-2 {
-    text-align: center;
-    height: 50rem;
+  .main-3 .container .row .col1 {
+    order: 2;
+  
   }
-  .main-3 {
+  .main-3 .img-fluid {
+    transform: scale(1.2) !important;
+  }
+  .main-2 {
     text-align: center;
     height: 40rem;
   }
-
+  .main-3 {
+    text-align: center;
+    height: 29rem;
+  }
+  .segments {
+    margin-bottom: 0rem;
+    height: 78rem;
+  }
+  .segments .img-fluid {
+    height: 33% !important;
+  }
+  .segments .container .col.col1{
+    max-height: 33rem;
+  }
   .segments .container .row .col {
     transform: scale(0.8);
-    margin-bottom: -3rem;
+    margin-bottom: -7rem;
   }
   .laptop {
     height: 40rem;

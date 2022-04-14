@@ -27,7 +27,7 @@ $clubs_array = array_slice(getAllClubs($db), 0,3);
     <div class="container py-5">
         <div class="row row-cols-1 row-cols-lg-2">
             <div class="col col1 justify-content-center align-items-center  my-auto">
-                <h2 class="display-5 "> Join Your Favorite Club Right Now Easly</h2>
+                <h2 class="display-3 "> Join Your Favorite Club Right Now Easly</h2>
                 
 
                 <p>Discover the fastest, most effective way to join clubs at Ensam Casablanca.
