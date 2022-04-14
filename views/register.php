@@ -137,7 +137,7 @@ include('components/header_1.php');
 						<input type="submit" value="Register" name="submit">
 					</div>
 					<div class="acc">
-						<p>Already have an account? <a href="login.php" target="#blank">Log in</a></p>
+						<p>Already have an account? <a href="/login" target="#blank">Log in</a></p>
 					</div>
 				</div>
 			</form>
