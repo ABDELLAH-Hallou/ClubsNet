@@ -130,7 +130,7 @@ $clubs_array = array_slice(getAllClubs($db), 0,3);
                 </p>
             </div>
             <div class="col ">
-                <img class="img-fluid" src="assets/images/smsb_-_dribbble_faq_4x.png" alt="...">
+                <img class="img-fluid" src="assets/images/contact us.png" alt="...">
             </div>
 
         </div>

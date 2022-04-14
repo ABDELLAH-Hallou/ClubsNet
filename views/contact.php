@@ -54,7 +54,7 @@ include_once('controllers/contact/addContact.php');
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12">
-                <img class="illimg" src="assets/images/cont.png" alt="contact us">
+                <img class="illimg" src="assets/images/contact page.png" alt="contact us">
             </div>
         </div>
     </div>
