@@ -8,7 +8,7 @@ $clubs_array = getAllClubs($db);
 <!-- 
     block style
 -->
-<link href="assets/css/landing.css" rel="stylesheet" type="text/css">
+<!-- <link href="assets/css/landing.css" rel="stylesheet" type="text/css"> -->
 <link href="assets/css/footer.css" rel="stylesheet" type="text/css">
 <link href="assets/css/header.css" rel="stylesheet" type="text/css">
 <link href="assets/css/clubs.css" rel="stylesheet" type="text/css">
