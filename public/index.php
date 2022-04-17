@@ -30,9 +30,9 @@ $clubs_array = array_slice(getAllClubs($db), 0,3);
                 <h2 class="display-3 "> Join Your Favorite Club Right Now Easly</h2>
                 
 
-                <p>Discover the fastest, most effective way to join clubs at Ensam Casablanca.
+                <p>Discover the fastest, most effective way to join clubs.
                     Develop your Hard skills with Extracurricular Activities, participate in competitions and Events
-                    organized by the the Clubs of Ensam Casablanca.
+                    organized by the Clubs.
                 </p>
 
             </div>
@@ -52,7 +52,7 @@ $clubs_array = array_slice(getAllClubs($db), 0,3);
             <div class="col col1 my-auto">
                 <h2 class="display-5 ">live the best Extracurricular experience</h2>
 
-                <p>Start today to follow all the activities of the Ensam Casablanca Clubs, clubs led by qualified
+                <p>Start today to follow all the activities of your favorite Clubs, clubs led by qualified
                     leaders in many fields such as social entrepreneurship, IT, robotics, the arts, sports ... etc.
                 </p>
                 <a class="btn btn2" href="/register"> Join Us</a>

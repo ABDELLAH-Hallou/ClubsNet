@@ -12,8 +12,7 @@ $clubs_array = $clubs->fetchAll();
                     <div class="f_title">
                         <h3>&#xFEFF;About</h3>
                     </div>
-                    <p>In parallel to technical training and scientific research, the National School of Arts and
-                        Crafts ENSAM CASABLANCA offers a range of cultural, sporting, entrepreneurial, and social
+                    <p>In parallel to technical training and scientific research, We offer a range of cultural, sporting, entrepreneurial, and social
                         activities recognizing the invaluable contribution of the latter in guaranteeing
                         professional integration. favorable to Gadz'arts wanting to be versatile and open to the
                         socio-cultural and socio-economic world.</p>
@@ -124,7 +123,7 @@ $clubs_array = $clubs->fetchAll();
             </div>
             <!-- last row -->
             <div style="color: #999;" class="col-12 text-center pt-5">
-                <p>Copyright © 2021 EnsamXclub. All rights reserved</p>
+                <p>Copyright © 2021 ClubsNet. All rights reserved</p>
             </div>
         </div>
     </div>

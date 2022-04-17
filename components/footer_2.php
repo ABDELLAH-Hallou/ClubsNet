@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row  text-lg-left text-center">
             <div style="color: #999;" class="col-12 text-center pt-4">
-                <p>Copyright © 2021 EnsamXclub. All rights reserved</p>
+                <p>Copyright © 2021 ClubsNet. All rights reserved</p>
             </div>
         </div>
     </div>
