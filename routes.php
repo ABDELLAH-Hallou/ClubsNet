@@ -22,6 +22,8 @@ $id;
 if (is_numeric(end($arr_url))) {
     $id = end($arr_url);
 }
+
+
 $root = '/' . basename(__DIR__);
 if (is_numeric(end($arr_url))) {
     switch ($request) {
