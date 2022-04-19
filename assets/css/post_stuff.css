@@ -1,7 +1,30 @@
 
-.like_form
+.commnt_bttn{
+    font-family: "Ubuntu", sans-serif;
+    background-color: white;
+    width: 8%;
+    color: #00022e;
+    font-size: 0.7rem;
+    border-radius: 30px;
+}
+@media all and (max-width: 991px) {
+  .commnt_bttn{
+    width: 14%;
+    }
+}
+
+.commnt_bttn:hover {
+    background-color: #00022e;
+    color: white;
+    border-color: white;
+  }
+.cmmnt_reaction
 {
     display: inline;
+    cursor: pointer;
+}
+.comments-section{
+    display: none;
 }
 .likebtn{
     background: none!important;

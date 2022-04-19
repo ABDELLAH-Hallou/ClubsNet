@@ -8,12 +8,12 @@ include_once('models/like/getFromLike.php');
 include_once('models/comment/getFromComment.php');
 // check GET request id param
 // if (isset($_GET['id'])) {
-    // get the club
-    $club = getClub($db, $id);
-    // get posts
-    $posts = getAllClubPosts($db, $id);
-    // get president
-    $student = getStudent($db, $club['president']);
+// get the club
+$club = getClub($db, $id);
+// get posts
+$posts = getAllClubPosts($db, $id);
+// get president
+$student = getStudent($db, $club['president']);
 // }
 include_once('controllers/club/feedback.php');
 
@@ -112,9 +112,9 @@ include_once('controllers/club/feedback.php');
                             </li>
                         </ul>
                         <div class="row justify-content-md-center ">
-                            <a href="<?php echo "/join-club:".htmlspecialchars($club['id']) ?>" class="btn btn2 col-lg-3">JOIN</a>
+                            <a href="<?php echo "/join-club:" . htmlspecialchars($club['id']) ?>" class="btn btn2 col-lg-3">JOIN</a>
                             <a href="/contact" class="btn btn2 col-lg-3">Conatct</a>
-                            <a href="<?php echo '/checkout:'.htmlspecialchars($club['id']) ?>" class="btn btn2 col-lg-3">Donate</a>
+                            <a href="<?php echo '/checkout:' . htmlspecialchars($club['id']) ?>" class="btn btn2 col-lg-3">Donate</a>
                         </div>
 
 
@@ -180,7 +180,7 @@ include_once('controllers/club/feedback.php');
                                 <div class="content vision">
                                     &emsp;<?php echo htmlspecialchars($club['description']); ?>
                                 </div>
-                                <?php 
+                                <?php
                                 ?>
                             </li>
                         </ul>
@@ -193,7 +193,7 @@ include_once('controllers/club/feedback.php');
 
                                 <input type="hidden" name="club" value="<?php echo $club['id'] ?>">
                                 <button class="btn btn2 mt-2 mb-2 mr-1 update-input btn-danger" name="delete" type="submit">Delete</button>
-                                <a href="<?php echo '/edit-club:'.htmlspecialchars($club['id']); ?>" class="btn btn2 mt-2 mb-2 update-input btn-success" name="update">Edit</a>
+                                <a href="<?php echo '/edit-club:' . htmlspecialchars($club['id']); ?>" class="btn btn2 mt-2 mb-2 update-input btn-success" name="update">Edit</a>
 
                             </div>
                         </div>
@@ -245,13 +245,13 @@ include_once('controllers/club/feedback.php');
                                             <div class="panel-heading">
                                                 <div class="media">
                                                     <div class="media-left">
-                                                        <a href="<?php echo '/profile:'.$author['id']; ?>">
+                                                        <a href="<?php echo '/profile:' . $author['id']; ?>">
                                                             <img src="<?php echo htmlspecialchars($author['image']); ?>" />
                                                         </a>
                                                     </div>
                                                     <div class="media-body">
                                                         <h4 class="media-heading">
-                                                            <a href="<?php echo '/profile:'.$author['id']; ?>">
+                                                            <a href="<?php echo '/profile:' . $author['id']; ?>">
                                                                 <?php echo htmlspecialchars($author['firstname']) . ' ' . htmlspecialchars($author['lastname']); ?>
                                                             </a>
                                                         </h4>
@@ -279,94 +279,99 @@ include_once('controllers/club/feedback.php');
                                                     </div>
                                                 </div>
                                             </div>
-                                            <?php if(isset($_SESSION['id'])){ ?>
-                                            <div class="panel-footer">
-                                                <ul>
-                                                    <li>
-                                                        <?php
-                                                        $result = getPostlikes($db, $post['id']);
-                                                        $results = count($result);
-                                                        $likesFromMe = getPostlikesFromUser($db, $post['id'], $_SESSION['id']);
-                                                        if (count($likesFromMe) === 1) { ?>
-                                                            <!-- user already likes the post -->
-                                                            <svg data-id="<?php echo $post['id']; ?>" class="like hide" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 460.958 460.958" style="enable-background:new 0 0 460.958 460.958;" xml:space="preserve">
-                                                            <path d="M337.843,23.957c-45.74,0-86.155,25.047-107.364,62.788c-21.209-37.741-61.623-62.788-107.364-62.788    C55.229,23.957,0,79.186,0,147.072c0,54.355,37.736,119.46,112.16,193.506c54.115,53.84,107.363,92.031,109.603,93.631    c2.607,1.861,5.662,2.792,8.716,2.792s6.109-0.93,8.715-2.792c2.241-1.6,55.489-39.791,109.604-93.631    c74.424-74.046,112.16-139.151,112.16-193.506C460.958,79.186,405.729,23.957,337.843,23.957z M327.919,319.032    c-39.843,39.681-80.171,71.279-97.44,84.307c-17.269-13.029-57.597-44.626-97.44-84.307C65.63,251.899,30,192.436,30,147.072    c0-51.344,41.771-93.115,93.115-93.115c47.279,0,87.03,35.369,92.464,82.271c0.876,7.565,7.284,13.273,14.9,13.273    c7.616,0,14.023-5.708,14.9-13.273c5.435-46.902,45.185-82.271,92.464-82.271c51.344,0,93.115,41.771,93.115,93.115    C430.958,192.436,395.328,251.899,327.919,319.032z" />
-                                                        </svg>
-                                                            <svg data-id="<?php echo $post['id']; ?>" class="fill-love unlike " xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 122.88 107.39">
-                                                                <defs>
-                                                                    <style>
-                                                                        .fill-love {
-                                                                            fill: red;
-                                                                            fill-rule: evenodd;
-                                                                        }
-                                                                    </style>
-                                                                </defs>
-                                                                <title>red-heart</title>
-                                                                <path class="cls-1" d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z" />
+                                            <?php if (isset($_SESSION['id'])) { ?>
+                                                <div class="panel-footer">
+                                                    <ul>
+                                                        <li>
+                                                            <?php
+                                                            $resultLikes = getPostlikes($db, $post['id']);
+                                                            $resultsLikes = count($resultLikes);
+                                                            $likesFromMe = getPostlikesFromUser($db, $post['id'], $_SESSION['id']);
+                                                            if (count($likesFromMe) === 1) { ?>
+                                                                <!-- user already likes the post -->
+                                                                <svg data-id="<?php echo $post['id']; ?>" class="like hide" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 460.958 460.958" style="enable-background:new 0 0 460.958 460.958;" xml:space="preserve">
+                                                                    <path d="M337.843,23.957c-45.74,0-86.155,25.047-107.364,62.788c-21.209-37.741-61.623-62.788-107.364-62.788    C55.229,23.957,0,79.186,0,147.072c0,54.355,37.736,119.46,112.16,193.506c54.115,53.84,107.363,92.031,109.603,93.631    c2.607,1.861,5.662,2.792,8.716,2.792s6.109-0.93,8.715-2.792c2.241-1.6,55.489-39.791,109.604-93.631    c74.424-74.046,112.16-139.151,112.16-193.506C460.958,79.186,405.729,23.957,337.843,23.957z M327.919,319.032    c-39.843,39.681-80.171,71.279-97.44,84.307c-17.269-13.029-57.597-44.626-97.44-84.307C65.63,251.899,30,192.436,30,147.072    c0-51.344,41.771-93.115,93.115-93.115c47.279,0,87.03,35.369,92.464,82.271c0.876,7.565,7.284,13.273,14.9,13.273    c7.616,0,14.023-5.708,14.9-13.273c5.435-46.902,45.185-82.271,92.464-82.271c51.344,0,93.115,41.771,93.115,93.115    C430.958,192.436,395.328,251.899,327.919,319.032z" />
+                                                                </svg>
+                                                                <svg data-id="<?php echo $post['id']; ?>" class="fill-love unlike " xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 122.88 107.39">
+                                                                    <defs>
+                                                                        <style>
+                                                                            .fill-love {
+                                                                                fill: red;
+                                                                                fill-rule: evenodd;
+                                                                            }
+                                                                        </style>
+                                                                    </defs>
+                                                                    <title>red-heart</title>
+                                                                    <path class="cls-1" d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z" />
+                                                                </svg>
+                                                            <?php } else { ?>
+                                                                <!-- user has not yet liked post -->
+                                                                <svg data-id="<?php echo $post['id']; ?>" class="like " xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 460.958 460.958" style="cursor:pointer; enable-background:new 0 0 460.958 460.958;" xml:space="preserve">
+                                                                    <path d="M337.843,23.957c-45.74,0-86.155,25.047-107.364,62.788c-21.209-37.741-61.623-62.788-107.364-62.788    C55.229,23.957,0,79.186,0,147.072c0,54.355,37.736,119.46,112.16,193.506c54.115,53.84,107.363,92.031,109.603,93.631    c2.607,1.861,5.662,2.792,8.716,2.792s6.109-0.93,8.715-2.792c2.241-1.6,55.489-39.791,109.604-93.631    c74.424-74.046,112.16-139.151,112.16-193.506C460.958,79.186,405.729,23.957,337.843,23.957z M327.919,319.032    c-39.843,39.681-80.171,71.279-97.44,84.307c-17.269-13.029-57.597-44.626-97.44-84.307C65.63,251.899,30,192.436,30,147.072    c0-51.344,41.771-93.115,93.115-93.115c47.279,0,87.03,35.369,92.464,82.271c0.876,7.565,7.284,13.273,14.9,13.273    c7.616,0,14.023-5.708,14.9-13.273c5.435-46.902,45.185-82.271,92.464-82.271c51.344,0,93.115,41.771,93.115,93.115    C430.958,192.436,395.328,251.899,327.919,319.032z" />
+                                                                </svg>
+                                                                <svg data-id="<?php echo $post['id']; ?>" class="fill-love unlike hide" xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 122.88 107.39">
+                                                                    <defs>
+                                                                        <style>
+                                                                            .fill-love {
+                                                                                fill: red;
+                                                                                fill-rule: evenodd;
+                                                                            }
+                                                                        </style>
+                                                                    </defs>
+                                                                    <title>red-heart</title>
+                                                                    <path class="cls-1" d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z" />
+                                                                </svg>
+                                                            <?php } ?>
+
+                                                            <span class="likes_count"> <?php echo htmlspecialchars($resultsLikes); ?> </span>&nbsp; Likes
+
+                                                        </li>
+                                                        <li>
+                                                            <?php
+                                                            $resultCmmnt = getPostComments($db, $post['id']);
+                                                            $resulstCmmnts = count($resultCmmnt);
+                                                            ?>
+
+                                                            <span class="cmmnt_reaction">
+                                                            <svg  xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24">
+                                                                <path d="M12,2A10,10,0,0,0,2,12a9.89,9.89,0,0,0,2.26,6.33l-2,2a1,1,0,0,0-.21,1.09A1,1,0,0,0,3,22h9A10,10,0,0,0,12,2Zm0,18H5.41l.93-.93a1,1,0,0,0,0-1.41A8,8,0,1,1,12,20Z" />
                                                             </svg>
-                                                        <?php } else { ?>
-                                                            <!-- user has not yet liked post -->
-                                                            <svg data-id="<?php echo $post['id']; ?>" class="like " xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 460.958 460.958" style="cursor:pointer; enable-background:new 0 0 460.958 460.958;" xml:space="preserve">
-                                                            <path d="M337.843,23.957c-45.74,0-86.155,25.047-107.364,62.788c-21.209-37.741-61.623-62.788-107.364-62.788    C55.229,23.957,0,79.186,0,147.072c0,54.355,37.736,119.46,112.16,193.506c54.115,53.84,107.363,92.031,109.603,93.631    c2.607,1.861,5.662,2.792,8.716,2.792s6.109-0.93,8.715-2.792c2.241-1.6,55.489-39.791,109.604-93.631    c74.424-74.046,112.16-139.151,112.16-193.506C460.958,79.186,405.729,23.957,337.843,23.957z M327.919,319.032    c-39.843,39.681-80.171,71.279-97.44,84.307c-17.269-13.029-57.597-44.626-97.44-84.307C65.63,251.899,30,192.436,30,147.072    c0-51.344,41.771-93.115,93.115-93.115c47.279,0,87.03,35.369,92.464,82.271c0.876,7.565,7.284,13.273,14.9,13.273    c7.616,0,14.023-5.708,14.9-13.273c5.435-46.902,45.185-82.271,92.464-82.271c51.344,0,93.115,41.771,93.115,93.115    C430.958,192.436,395.328,251.899,327.919,319.032z" />
-                                                        </svg>
-                                                            <svg data-id="<?php echo $post['id']; ?>" class="fill-love unlike hide" xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 122.88 107.39">
-                                                                <defs>
-                                                                    <style>
-                                                                        .fill-love {
-                                                                            fill: red;
-                                                                            fill-rule: evenodd;
-                                                                        }
-                                                                    </style>
-                                                                </defs>
-                                                                <title>red-heart</title>
-                                                                <path class="cls-1" d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z" />
+                                                            <span class="comments_count"><?php echo htmlspecialchars($resulstCmmnts); ?></span>Comments
+                                                            </span>
+
+                                                        </li>
+                                                        <li>
+
+                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
+                                                                <path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30   S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z" />
+                                                                <path d="M39,20c3.309,0,6-2.691,6-6s-2.691-6-6-6c-3.131,0-5.705,2.411-5.973,5.474L18.961,23.788C18.086,23.289,17.077,23,16,23   c-3.309,0-6,2.691-6,6s2.691,6,6,6c1.077,0,2.086-0.289,2.961-0.788l14.065,10.314C33.295,47.589,35.869,50,39,50   c3.309,0,6-2.691,6-6s-2.691-6-6-6c-2.69,0-4.972,1.78-5.731,4.223l-12.716-9.325C21.452,31.848,22,30.488,22,29   s-0.548-2.848-1.448-3.898l12.716-9.325C34.028,18.22,36.31,20,39,20z M39,10c2.206,0,4,1.794,4,4s-1.794,4-4,4s-4-1.794-4-4   S36.794,10,39,10z M12,29c0-2.206,1.794-4,4-4s4,1.794,4,4s-1.794,4-4,4S12,31.206,12,29z M39,40c2.206,0,4,1.794,4,4s-1.794,4-4,4   s-4-1.794-4-4S36.794,40,39,40z" />
                                                             </svg>
+                                                            <span>Share</span>
+
+                                                        </li>
+                                                    </ul>
+                                                    <div class="comments-section mt-3">
+                                                        <?php foreach ($resultCmmnt as $comment) { ?>
+                                                            <div class="form-line">
+                                                                <span class="form-control"><?php echo $comment['comment']; ?></span>
+                                                            </div>
+
                                                         <?php } ?>
 
-                                                        <span class="likes_count"> <?php echo htmlspecialchars($results); ?> </span>&nbsp; Likes
-
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <form method="post" action="" class="like_form">
-                                                                <button class="likebtn"><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24">
-                                                                        <path d="M12,2A10,10,0,0,0,2,12a9.89,9.89,0,0,0,2.26,6.33l-2,2a1,1,0,0,0-.21,1.09A1,1,0,0,0,3,22h9A10,10,0,0,0,12,2Zm0,18H5.41l.93-.93a1,1,0,0,0,0-1.41A8,8,0,1,1,12,20Z" />
-                                                                    </svg></button>
-                                                            </form>
-                                                            <span><?php
-                                                                    // get comments
-                                                                    $comments = getPostComments($db, $post['id']);
-                                                                    echo count($comments);
-                                                                    ?>
-                                                                Comments</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <form method="post" action="" class="like_form">
-                                                                <button class="likebtn">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
-                                                                        <path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30   S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z" />
-                                                                        <path d="M39,20c3.309,0,6-2.691,6-6s-2.691-6-6-6c-3.131,0-5.705,2.411-5.973,5.474L18.961,23.788C18.086,23.289,17.077,23,16,23   c-3.309,0-6,2.691-6,6s2.691,6,6,6c1.077,0,2.086-0.289,2.961-0.788l14.065,10.314C33.295,47.589,35.869,50,39,50   c3.309,0,6-2.691,6-6s-2.691-6-6-6c-2.69,0-4.972,1.78-5.731,4.223l-12.716-9.325C21.452,31.848,22,30.488,22,29   s-0.548-2.848-1.448-3.898l12.716-9.325C34.028,18.22,36.31,20,39,20z M39,10c2.206,0,4,1.794,4,4s-1.794,4-4,4s-4-1.794-4-4   S36.794,10,39,10z M12,29c0-2.206,1.794-4,4-4s4,1.794,4,4s-1.794,4-4,4S12,31.206,12,29z M39,40c2.206,0,4,1.794,4,4s-1.794,4-4,4   s-4-1.794-4-4S36.794,40,39,40z" />
-                                                                    </svg></button>
-                                                            </form>
-                                                            <span>Share</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-
-                                                <div class="form-group">
-                                                    <div class="form-line">
-                                                        <input type="text" class="form-control" placeholder="Type a comment" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="form-line">
+                                                            <input type="text" class="form-control commentText" placeholder="Type a comment" />
+                                                            <button data-id="<?php echo $post['id']; ?>" type="submit" class="btn commnt_bttn cmmntbtn">Send</button>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
                                             <?php } ?>
                                         </div>
                                     <?php }
                                     if (isset($_SESSION['id']) && $_SESSION['id'] === $club['president']) {
                                     ?>
-                                        <a href="<?php echo '/new-post:'.$club['id'] ?>" class="mt-3 btn btn2 newPost">New Post</a><?php } ?>
+                                        <a href="<?php echo '/new-post:' . $club['id'] ?>" class="mt-3 btn btn2 newPost">New Post</a><?php } ?>
                                 </div>
                                 <div class="tab-pane fade" id="feedback" role="tabpanel" aria-labelledby="feedback-tab">
                                     <!--Modal Content-->
@@ -382,7 +387,7 @@ include_once('controllers/club/feedback.php');
                                                     feedback.</strong></h5>
                                         </div>
                                         <!-- <hr> -->
-                                        <form action="<?php echo '/club:'.$id ?>" method="POST" id="feedback_form" class="needs-validation" novalidate>
+                                        <form action="<?php echo '/club:' . $id ?>" method="POST" id="feedback_form" class="needs-validation" novalidate>
                                             <div class=" rating-section mt-4">
                                                 <h6 class="text-center mb-4">Your Rating</h6>
                                                 <div class="d-flex justify-content-center ml-4 mr-4">
@@ -474,6 +479,33 @@ include_once('controllers/club/feedback.php');
                     $post.siblings().removeClass('hide');
                 }
             });
+        });
+
+        // comments
+        $('.comments-section').hide();
+        $('.cmmntbtn').on('click', function() {
+            $('.cmmntbtn').hide();
+            var postid = $(this).data('id');
+            $post = $(this);
+            $.ajax({
+                url: '/comment',
+                type: 'POST',
+                data: {
+                    'comment': $('.commentText').val(),
+                    'postid': postid
+                },
+                success: function(response) {
+
+                    $('.comments_count').text(response);
+                    $('.commentText').val("");
+                    $('.cmmntbtn').show();
+                }
+            });
+        });
+        $('.cmmnt_reaction').on('click', function(){
+            if($('.comments-section').is(':hidden'))
+            $('.comments-section').show();
+            else $('.comments-section').hide();
         });
     });
 </script>

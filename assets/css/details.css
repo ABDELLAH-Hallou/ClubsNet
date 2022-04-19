@@ -415,10 +415,28 @@ button,input,select,a {
   border-radius: 0;
   padding-left: 0; 
 }
-.form-group .form-line {
+/* .form-group .form-line {
   width: 100%;
   position: relative;
   border-bottom: 1px solid #ddd; 
+} */
+.form-group .form-line {
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+}
+
+@media all and (max-width: 991px) {
+  .form-group .form-line {
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+    display: inline  !important;
+  }
 }
 .form-group .form-line:after {
   content: '';

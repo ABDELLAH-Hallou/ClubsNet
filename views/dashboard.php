@@ -20,7 +20,7 @@ foreach ($clubsName as $clubname) {
   $names_arr[$i]['members'] = $clubname['members'];
   $i++;
 }
-file_put_contents(__DIR__.'/views/data.json', json_encode($names_arr));
+file_put_contents(__DIR__.'/data.json', json_encode($names_arr));
 ?>
 
 <div class="container-fluid">
@@ -157,7 +157,7 @@ file_put_contents(__DIR__.'/views/data.json', json_encode($names_arr));
           };
           console.log(datarr);
           
-          $.getJSON("views/data.json", adddata);
+          $.getJSON("/dataClubDash", adddata);
         });
       </script>
       <div id="chartContainer" style="height: 300px; width: 100%;"></div>

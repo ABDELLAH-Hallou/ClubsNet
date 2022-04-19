@@ -349,7 +349,7 @@ if (is_numeric(end($arr_url))) {
                 print_r($e);
             }
             break;
-        case '/dashboard':
+        case '/dashboard/':
             try {
                 require __DIR__ . '/views/dashboard.php';
             } catch (Exception $e) {
@@ -385,6 +385,22 @@ if (is_numeric(end($arr_url))) {
         case '/like':
             try {
                 require __DIR__ . '/controllers/posts/likes.php';
+            } catch (Exception $e) {
+                echo $e->getMessage() . '</br>';
+                print_r($e);
+            }
+            break;
+        case '/comment':
+            try {
+                require __DIR__ . '/controllers/posts/comment.php';
+            } catch (Exception $e) {
+                echo $e->getMessage() . '</br>';
+                print_r($e);
+            }
+            break;
+        case '/dataClubDash':
+            try {
+                require __DIR__ . '/views/data.json';
             } catch (Exception $e) {
                 echo $e->getMessage() . '</br>';
                 print_r($e);
