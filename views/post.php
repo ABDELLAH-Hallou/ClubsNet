@@ -1,7 +1,7 @@
 <?php
 include('components/header_1.php');
 include('models/club/getFromClub.php');
-include('models/student/getFromStudent.php');
+// include('models/student/getFromStudent.php');
 if (!isset($_SESSION["id"])) {
 	header("location:/login");
 }
