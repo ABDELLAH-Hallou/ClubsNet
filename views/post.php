@@ -10,9 +10,8 @@ include('components/header_1.php');
     end block style 
 -->
 <?php
-include('components/navbar.php');
+
 include('models/club/getFromClub.php');
-// include('models/student/getFromStudent.php');
 if (!isset($_SESSION["id"])) {
 	header("location:/login");
 }
@@ -23,11 +22,12 @@ if (!isset($_SESSION["id"])) {
     $student = getStudent($db, $club['president']);
 // }
 include('controllers/posts/create_post.php');
+include('components/navbar.php');
 ?>
 
 <section class="content post-body mb-5">
     <H1 align="center"><?php echo htmlspecialchars($club['name']); ?></H1>
-    <form method="post" enctype="multipart/form-data">
+    <form action="" method="post" enctype="multipart/form-data">
         <h2>Create New Post</h2>
         <!-- <textarea name="post" id="mytextarea"></textarea> -->
         <fieldset>

@@ -12,7 +12,6 @@ include('components/header_1.php');
 <?php 
 include('components/navbar.php');
 include('models/club/getFromClub.php');
-include('models/student/getFromStudent.php');
 // check GET request id param
 if(isset($_GET['id'])){
     // get the club

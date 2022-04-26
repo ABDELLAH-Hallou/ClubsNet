@@ -17,7 +17,7 @@ Configuration::instance([
 ]);
 // routes handling
 $request = $_SERVER['REQUEST_URI'];
-$arr_url = explode(':', $request);
+$arr_url = explode('_', $request);
 $id;
 if (is_numeric(end($arr_url))) {
     $id = end($arr_url);
@@ -29,7 +29,7 @@ if (is_numeric(end($arr_url))) {
     switch ($request) {
             // dynamic routes
             // Club details
-        case '/club:' . $id:
+        case '/club_' . $id:
             try {
                 require __DIR__ . '/views/details.php';
             } catch (Exception $e) {
@@ -92,7 +92,7 @@ if (is_numeric(end($arr_url))) {
             }
             break;
             // New Post
-        case '/new-post:' . $id:
+        case '/new-post_' . $id:
             try {
                 require __DIR__ . '/views/post.php';
             } catch (Exception $e) {

@@ -24,13 +24,10 @@
                                 $whoAmI = getStudent($db, $_SESSION["id"]);
                                 if ($whoAmI['email'] == 'admin@admin.com') { ?>
                             <li class="nav-item">
-                                <a class="nav-link" href="/dashboard">Dashboard</a>
+                                <a class="nav-link" href="/dashboard/">Dashboard</a>
                             </li>
                     <?php }
-                            } ?>
-
-
-                    <?php
+                            } 
                     if (isset($_SESSION["id"])) { ?>
                         <li class="nav-item dropdown username">
                             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#FBAA1B; ">
