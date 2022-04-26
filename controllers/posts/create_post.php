@@ -13,7 +13,7 @@ if ($request_method === 'POST' && isset($_POST['post'])) {
             $valid = true;     
     }
     $_SESSION['valid'] = $valid;
-    header('Location: /club_' . $club['id']);
+    header('Location: /club:' . $club['id']);
     exit;
 } elseif ($request_method === 'GET') {
     if (isset($_SESSION['valid'])) {
