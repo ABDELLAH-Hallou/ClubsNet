@@ -69,7 +69,7 @@ $clubs_array = $clubs->fetchAll();
                         </li>
                     </ul>
                     <div class="mapouter">
-                        <div class="gmap_canvas"><iframe width="270" height="250" id="gmap_canvas" src="https://maps.google.com/maps?q=150%20Avenue%20Nile%20Sidi%20Othman%D8%8C%20Casablanca%2020670&t=k&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://2piratebay.org"></a><br>
+                        <div class="gmap_canvas"><iframe title="ensam-map" width="270" height="250" id="gmap_canvas" src="https://maps.google.com/maps?q=150%20Avenue%20Nile%20Sidi%20Othman%D8%8C%20Casablanca%2020670&t=k&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://2piratebay.org"></a><br>
                             <style>
                                 .mapouter {
                                     position: relative;

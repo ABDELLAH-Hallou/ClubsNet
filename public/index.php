@@ -1,21 +1,23 @@
 <?php
 include('components/header_1.php');
+?>
+<!-- 
+    block style
+ -->
+<script src="assets/js/scrolling.js"></script>
+<link href="assets/css/landing.css" rel="stylesheet" type="text/css">
+<link href="assets/css/header.css" rel="stylesheet" type="text/css">
+<!-- 
+    end block style 
+ -->
+<?php
+include('components/navbar.php');
 include('models/club/getFromClub.php');
 
 // include('models/student/getFromStudent.php');
 include('controllers/club/string_control.php');
 $clubs_array = array_slice(getAllClubs($db), 0,3);
 ?>
-
-<!-- 
-    block style
- -->
-<link href="assets/css/landing.css" rel="stylesheet" type="text/css">
-<link href="assets/css/footer.css" rel="stylesheet" type="text/css">
-<link href="assets/css/header.css" rel="stylesheet" type="text/css">
-<!-- 
-    end block style 
- -->
 <section class="main">
     <div class="custom-shape-divider-top-1613908015">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -36,7 +38,7 @@ $clubs_array = array_slice(getAllClubs($db), 0,3);
                 </p>
 
             </div>
-            <img class="col " src="assets/images/activity-management.png" alt="background">
+            <img class="col "  src="assets/images/activity-management.png" alt="background">
         </div>
 
     </div>
@@ -60,7 +62,7 @@ $clubs_array = array_slice(getAllClubs($db), 0,3);
 
             </div>
             <div class="col ">
-                <img class="img-fluid" src="assets/images/e4b297b2854e8c83136f5a52dda45cfb.jpg" alt="...">
+                <img class="img-fluid" loading="lazy" src="assets/images/e4b297b2854e8c83136f5a52dda45cfb.jpg" alt="...">
             </div>
 
         </div>
@@ -83,7 +85,7 @@ $clubs_array = array_slice(getAllClubs($db), 0,3);
 
             </div>
             <div class="col ">
-                <img class="img-fluid" src="assets/images/extracurricular-n-career-mentoring-crimson-education.png" alt="...">
+                <img class="img-fluid" loading="lazy" src="assets/images/extracurricular-n-career-mentoring-crimson-education.png" alt="...">
             </div>
 
         </div>
@@ -97,7 +99,7 @@ $clubs_array = array_slice(getAllClubs($db), 0,3);
             <?php foreach($clubs_array as $club){ ?>
             <div class="col col1">
                 <a href="<?php echo '/club:'.$club['id']?>" style="text-decoration: none; color:black !important;">
-                    <img class="img-fluid" src="<?php echo htmlspecialchars($club['image']); ?>" alt="...">
+                    <img class="img-fluid" loading="lazy" src="<?php echo htmlspecialchars($club['image']); ?>" alt="...">
                     <h4><?php echo htmlspecialchars($club['name']); ?></h4>
                 </a>
                 <p><?php echo htmlspecialchars(cut_description($club['description']));?>
@@ -130,7 +132,7 @@ $clubs_array = array_slice(getAllClubs($db), 0,3);
                 </p>
             </div>
             <div class="col ">
-                <img class="img-fluid" src="assets/images/contact us.png" alt="...">
+                <img class="img-fluid" loading="lazy" src="assets/images/contact us.png" alt="...">
             </div>
 
         </div>

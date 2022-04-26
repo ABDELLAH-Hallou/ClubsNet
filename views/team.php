@@ -1,19 +1,23 @@
-<?php include('components/header_1.php'); ?>
+<?php include('components/header_1.php'); 
+?>
 <!-- 
     block style
 -->
 <link href="assets/css/team.css" rel="stylesheet" type="text/css">
 <link href="assets/css/details.css" rel="stylesheet" type="text/css">
-<link href="assets/css/footer.css" rel="stylesheet" type="text/css">
 <link href="assets/css/header.css" rel="stylesheet" type="text/css">
 <!-- 
     end block style 
 -->
+<?php
+include('components/navbar.php');
+?>
+
 <div class="team-row">
 
     <div class="profile notmine">
         <h4>HALLOU<br>ABDELLAH</h4>
-        <img src="https://media-exp1.licdn.com/dms/image/C4D03AQHekLKPxBhWPQ/profile-displayphoto-shrink_800_800/0/1629574014745?e=1649894400&v=beta&t=wR7Hsavcog5ACM7LpuiE7SmuGTAxl3uCqSpb3VciEOQ" alt="ABDELLAH">
+        <img loading="lazy" src="https://media-exp1.licdn.com/dms/image/C4D03AQHekLKPxBhWPQ/profile-displayphoto-shrink_800_800/0/1629574014745?e=1649894400&v=beta&t=wR7Hsavcog5ACM7LpuiE7SmuGTAxl3uCqSpb3VciEOQ" alt="ABDELLAH">
         <div class="social">
             <a href="mailto: abdeallahhallou33@gmail.com?subject= EnsamXclub" target="_blank"><i class="fa fa-envelope"></i></a>
             <a href="https://www.instagram.com/abdo_hll/" target="_blank"><i class="fa fa-instagram"></i></a>
@@ -24,7 +28,7 @@
 
     <div class="profile notmine">
         <h4>IZOUARHN<br>CHAIMA</h4>
-        <img src="https://media-exp1.licdn.com/dms/image/C5603AQEmmseKTMhm7Q/profile-displayphoto-shrink_200_200/0/1641573307186?e=1647475200&v=beta&t=8aznQMXuasT2wVQ2npAy6rOICa6UTg3i3-8LSgAZrZ8" alt="CHAIMA">
+        <img loading="lazy" src="https://media-exp1.licdn.com/dms/image/C5603AQEmmseKTMhm7Q/profile-displayphoto-shrink_200_200/0/1641573307186?e=1647475200&v=beta&t=8aznQMXuasT2wVQ2npAy6rOICa6UTg3i3-8LSgAZrZ8" alt="CHAIMA">
         <div class="social">
             <a href="mailto:shaymaeizwaghne.01@gmail.com?subject= EnsamXclub" target="_blank"><i class="fa fa-envelope"></i></a>
             <a href="https://www.instagram.com/chaima.iz/" target="_blank"><i class="fa fa-instagram"></i></a>

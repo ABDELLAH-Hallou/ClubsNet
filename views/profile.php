@@ -1,4 +1,15 @@
-<?php include('components/header_1.php');
+<?php 
+include('components/header_1.php');
+?>
+<!-- 
+    block style
+-->
+<link href="assets/css/profile.css" rel="stylesheet" type="text/css">
+<!-- 
+    end block style 
+-->
+<?php
+include('components/navbar.php');
 // include('models/student/getFromStudent.php');
 include('models/club/getFromClub.php');
 include('models/join/getFromJoin.php');
@@ -18,20 +29,11 @@ foreach ($joinedClubs as $join) {
     array_push($clubs, getClub($db, $join['club_id']));
 }
 ?>
-<!-- 
-    block style
--->
-<link href="assets/css/profile.css" rel="stylesheet" type="text/css">
-<link href="assets/css/footer.css" rel="stylesheet" type="text/css">
-<!-- 
-    end block style 
--->
-
 <section class="profile">
     <div class="container-fluid">
         <div class="prof">
             <a href="#PF">
-                <img class="img-fluid rounded-circle account-img" src="<?php echo htmlspecialchars($student['image']) ?>" alt="user-image">
+                <img loading="lazy" class="img-fluid rounded-circle account-img" src="<?php echo htmlspecialchars($student['image']) ?>" alt="user-image">
             </a>
             <div class="media-body">
                 <div style="display: flex;flex-direction: row;">
@@ -131,7 +133,7 @@ foreach ($joinedClubs as $join) {
         <article class="Club row container-fluid">
 
             <div class="part-1 col-4">
-                <a href="<?php echo "/club:".$club['id']; ?>"><img src="<?php echo htmlspecialchars($club['image']); ?>" alt="club"></a>
+                <a href="<?php echo "/club:".$club['id']; ?>"><img loading="lazy" src="<?php echo htmlspecialchars($club['image']); ?>" alt="club"></a>
             </div>
             <div class="part-2 col-8">
                 <div class="description">

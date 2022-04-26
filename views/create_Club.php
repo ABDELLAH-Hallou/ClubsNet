@@ -1,24 +1,10 @@
 <?php
 include('components/header_1.php');
-include('models/club/getFromClub.php');
-include('models/student/getFromStudent.php');
-
-if (!isset($_SESSION["id"])) {
-	header("location:/login");
-}
-// check GET request id param
-if (isset($_GET['id'])) {
-	// get the club
-	$club_info = getClub($db, $_GET['id']);
-	$clubs = getAllClubs($db);
-	$student = getStudent($db, $_SESSION['id']);
-}
 ?>
 <!-- 
     block style
  -->
-<!-- <link href="assets/css/landing.css" rel="stylesheet" type="text/css"> -->
-<link href="assets/css/footer.css" rel="stylesheet" type="text/css">
+<script src="assets/js/scrolling.js"></script>
 <link href="assets/css/header.css" rel="stylesheet" type="text/css">
 <link href="assets/css/create_club.css" rel="stylesheet" type="text/css">
 <style>
@@ -31,6 +17,22 @@ if (isset($_GET['id'])) {
 <!-- 
     end block style 
 -->
+<?php
+include('components/navbar.php');
+include('models/club/getFromClub.php');
+
+if (!isset($_SESSION["id"])) {
+	header("location:/login");
+}
+// check GET request id param
+if (isset($_GET['id'])) {
+	// get the club
+	$club_info = getClub($db, $_GET['id']);
+	$clubs = getAllClubs($db);
+	$student = getStudent($db, $_SESSION['id']);
+}
+?>
+
 <section class="main">
 	<div class="custom-shape-divider-top-1613908015">
 		<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">

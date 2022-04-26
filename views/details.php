@@ -1,5 +1,17 @@
 <?php
 include_once('components/header_1.php');
+?>
+<!-- 
+    block style
+ -->
+<link href="assets/css/details.css" rel="stylesheet" type="text/css">
+<link href="assets/css/feedback.css" rel="stylesheet" type="text/css">
+<link href="assets/css/post_stuff.css" rel="stylesheet" type="text/css">
+<!-- 
+    end block style 
+-->
+<?php
+include('components/navbar.php');
 include_once('controllers/club/getTags.php');
 include_once('models/club/getFromClub.php');
 include_once('models/post/getFromPost.php');
@@ -19,16 +31,7 @@ include_once('controllers/club/feedback.php');
 
 
 ?>
-<!-- 
-    block style
- -->
-<link href="assets/css/footer.css" rel="stylesheet" type="text/css">
-<link href="assets/css/details.css" rel="stylesheet" type="text/css">
-<link href="assets/css/feedback.css" rel="stylesheet" type="text/css">
-<link href="assets/css/post_stuff.css" rel="stylesheet" type="text/css">
-<!-- 
-    end block style 
--->
+
 
 <section class="content">
     <div class="container-fluid">
@@ -40,7 +43,7 @@ include_once('controllers/club/feedback.php');
                     <div class="profile-header">&nbsp;</div>
                     <div class="profile-body">
                         <div class="image-area">
-                            <img src="<?php echo htmlspecialchars($club['image']); ?>" alt="Profile Image" />
+                            <img loading="lazy" src="<?php echo htmlspecialchars($club['image']); ?>" alt="Profile Image" />
                         </div>
                         <div class="content-area">
                             <h3><?php echo htmlspecialchars($club['name']); ?></h3>
@@ -227,7 +230,7 @@ include_once('controllers/club/feedback.php');
                                                     <p>&emsp;<?php echo htmlspecialchars($club['description']); ?></p>
                                                 </div>
                                                 <div class="post-content">
-                                                    <img src="<?php echo htmlspecialchars($club['image']); ?>" class="img-responsive" />
+                                                    <img loading="lazy" src="<?php echo htmlspecialchars($club['image']); ?>" class="img-responsive" />
                                                 </div>
                                             </div>
                                         </div>
@@ -246,7 +249,7 @@ include_once('controllers/club/feedback.php');
                                                 <div class="media">
                                                     <div class="media-left">
                                                         <a href="<?php echo '/profile:' . $author['id']; ?>">
-                                                            <img src="<?php echo htmlspecialchars($author['image']); ?>" />
+                                                            <img loading="lazy" src="<?php echo htmlspecialchars($author['image']); ?>" />
                                                         </a>
                                                     </div>
                                                     <div class="media-body">
@@ -270,11 +273,11 @@ include_once('controllers/club/feedback.php');
                                                         $arr_media = explode('|-@-|', $post['media']);
                                                         if (count($arr_media) > 1) { ?>
                                                             <iframe class="mb-2" width="100%" height="450px" src="<?php echo htmlspecialchars($arr_media[0]); ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                                            <img src="<?php echo htmlspecialchars($arr_media[1]); ?>" class="img-responsive" />
+                                                            <img loading="lazy" src="<?php echo htmlspecialchars($arr_media[1]); ?>" class="img-responsive" />
                                                         <?php } elseif (!file_exists($post['media'])) { ?>
                                                             <iframe width="100%" height="450px" src="<?php echo htmlspecialchars($post['media']); ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                                         <?php } else { ?>
-                                                            <img src="<?php echo htmlspecialchars($post['media']); ?>" class="img-responsive" />
+                                                            <img loading="lazy" src="<?php echo htmlspecialchars($post['media']); ?>" class="img-responsive" />
                                                         <?php } ?>
                                                     </div>
                                                 </div>

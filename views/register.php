@@ -4,13 +4,17 @@ include('components/header_1.php');
 <!-- 
     block style
 -->
-<!-- <link href="assets/css/landing.css" rel="stylesheet" type="text/css"> -->
-<link href="assets/css/footer.css" rel="stylesheet" type="text/css">
-<link href="assets/css/header.css" rel="stylesheet" type="text/css">
+<script src="assets/js/scrolling.js"></script>
+<link href="assets/css/landing.css" rel="stylesheet" type="text/css">
 <link href="assets/css/register.css" rel="stylesheet" type="text/css">
+<link href="assets/css/header.css" rel="stylesheet" type="text/css">
+
 <!-- 
     end block style 
 -->
+<?php
+include('components/navbar.php');
+?>
 <section class="main">
 	<div class="custom-shape-divider-top-1613908015">
 		<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">

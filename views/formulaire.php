@@ -1,7 +1,27 @@
 <?php
 include('components/header_1.php');
+?>
+<!-- 
+    block style
+ -->
+ <script src="assets/js/scrolling.js"></script>
+<link href="assets/css/joinClub.css" rel="stylesheet" type="text/css">
+<link href="assets/css/header.css" rel="stylesheet" type="text/css">
+<!-- <link href="assets/css/register.css" rel="stylesheet" type="text/css"> -->
+<style>
+	@media (max-width: 991px) {
+		.main {
+			height: 68rem !important;
+		}
+	}
+</style>
+
+<!-- 
+    end block style 
+-->
+<?php
+include('components/navbar.php');
 include('models/club/getFromClub.php');
-include('models/student/getFromStudent.php');
 if (!isset($_SESSION["id"])) {
 	header("location:/login");
 }
@@ -16,24 +36,7 @@ if (!isset($_SESSION["id"])) {
 	$student = getStudent($db, $_SESSION['id']);
 // }
 ?>
-<!-- 
-    block style
- -->
-<link href="assets/css/joinClub.css" rel="stylesheet" type="text/css">
-<link href="assets/css/footer.css" rel="stylesheet" type="text/css">
-<link href="assets/css/header.css" rel="stylesheet" type="text/css">
-<!-- <link href="assets/css/register.css" rel="stylesheet" type="text/css"> -->
-<style>
-	@media (max-width: 991px) {
-		.main {
-			height: 68rem !important;
-		}
-	}
-</style>
 
-<!-- 
-    end block style 
--->
 
 <section class="main">
 	<div class="custom-shape-divider-top-1613908015">

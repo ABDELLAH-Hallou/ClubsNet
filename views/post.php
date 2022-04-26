@@ -1,5 +1,16 @@
 <?php
 include('components/header_1.php');
+?>
+<!-- 
+    block style
+-->
+<link href="assets/css/details.css" rel="stylesheet" type="text/css">
+<link href="assets/css/post.css" rel="stylesheet" type="text/css">
+<!-- 
+    end block style 
+-->
+<?php
+include('components/navbar.php');
 include('models/club/getFromClub.php');
 // include('models/student/getFromStudent.php');
 if (!isset($_SESSION["id"])) {
@@ -13,15 +24,7 @@ if (!isset($_SESSION["id"])) {
 // }
 include('controllers/posts/create_post.php');
 ?>
-<!-- 
-    block style
--->
-<link href="assets/css/footer.css" rel="stylesheet" type="text/css">
-<link href="assets/css/details.css" rel="stylesheet" type="text/css">
-<link href="assets/css/post.css" rel="stylesheet" type="text/css">
-<!-- 
-    end block style 
--->
+
 <section class="content post-body mb-5">
     <H1 align="center"><?php echo htmlspecialchars($club['name']); ?></H1>
     <form method="post" enctype="multipart/form-data">

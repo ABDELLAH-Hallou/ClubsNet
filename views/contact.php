@@ -1,16 +1,19 @@
 <?php 
 include_once('components/header_1.php');
-include_once('controllers/contact/addContact.php');
 ?>
 <!-- 
     block style
 -->
+<script src="assets/js/scrolling.js"></script>
 <link href="assets/css/contact.css" rel="stylesheet" type="text/css">
-<link href="assets/css/footer.css" rel="stylesheet" type="text/css">
 <link href="assets/css/header.css" rel="stylesheet" type="text/css">
 <!-- 
     end block style 
 -->
+<?php 
+include_once('components/navbar.php');
+include_once('controllers/contact/addContact.php');
+?>
 <section class="main">
     <div class="custom-shape-divider-top-1613908015">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -54,7 +57,7 @@ include_once('controllers/contact/addContact.php');
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12">
-                <img class="illimg" src="assets/images/contact page.png" alt="contact us">
+                <img class="illimg" loading="lazy" src="assets/images/contact page.png" alt="contact us">
             </div>
         </div>
     </div>

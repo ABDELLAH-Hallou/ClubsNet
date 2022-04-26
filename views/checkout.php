@@ -1,5 +1,16 @@
 <?php 
 include('components/header_1.php');
+?>
+<!-- 
+    block style
+ -->
+<link href="assets/css/details.css" rel="stylesheet" type="text/css">
+<link href="assets/css/checkout.css" rel="stylesheet" type="text/css">
+<!-- 
+    end block style 
+ -->
+<?php 
+include('components/navbar.php');
 include('models/club/getFromClub.php');
 include('models/student/getFromStudent.php');
 // check GET request id param
@@ -11,15 +22,6 @@ if(isset($_GET['id'])){
 }
 include('controllers/club/feedback.php');
 ?>
-<!-- 
-    block style
- -->
-<link href="assets/css/footer.css" rel="stylesheet" type="text/css">
-<link href="assets/css/details.css" rel="stylesheet" type="text/css">
-<link href="assets/css/checkout.css" rel="stylesheet" type="text/css">
-<!-- 
-    end block style 
- -->
 <section class="content">
     <div class="container-fluid">
         <div class="row clearfix">
@@ -30,7 +32,7 @@ include('controllers/club/feedback.php');
                     <div class="profile-header">&nbsp;</div>
                     <div class="profile-body">
                         <div class="image-area">
-                            <img src="<?php echo htmlspecialchars($club['image']); ?>" alt="AdminBSB - Profile Image" />
+                            <img src="<?php echo htmlspecialchars($club['image']); ?>" loading="lazy" alt="AdminBSB - Profile Image" />
                         </div>
                         <div class="content-area">
                             <h3><?php echo htmlspecialchars($club['name']); ?></h3>

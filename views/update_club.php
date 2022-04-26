@@ -1,7 +1,25 @@
 <?php
 include('components/header_1.php');
+?>
+<!-- 
+    block style
+ -->
+<script src="assets/js/scrolling.js"></script>
+<link href="assets/css/header.css" rel="stylesheet" type="text/css">
+<link href="assets/css/create_club.css" rel="stylesheet" type="text/css">
+<style>
+	@media (max-width: 991px) {
+		.main {
+			height: 68rem !important;
+		}
+	}
+</style>
+<!-- 
+    end block style 
+-->
+<?php
+include('components/navbar.php');
 include('models/club/getFromClub.php');
-include('models/student/getFromStudent.php');
 include('models/join/getFromJoin.php');
 if (!isset($_SESSION["id"])) {
 	header("location:/login");
@@ -23,23 +41,7 @@ if (!isset($_SESSION["id"])) {
 	}
 // }
 ?>
-<!-- 
-    block style
- -->
-<!-- <link href="assets/css/landing.css" rel="stylesheet" type="text/css"> -->
-<link href="assets/css/footer.css" rel="stylesheet" type="text/css">
-<link href="assets/css/header.css" rel="stylesheet" type="text/css">
-<link href="assets/css/create_club.css" rel="stylesheet" type="text/css">
-<style>
-	@media (max-width: 991px) {
-		.main {
-			height: 68rem !important;
-		}
-	}
-</style>
-<!-- 
-    end block style 
--->
+
 <section class="main">
 	<div class="custom-shape-divider-top-1613908015">
 		<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -75,7 +77,7 @@ if (!isset($_SESSION["id"])) {
 					</div>
 					<div class="form-input-all">
 						<span class="label">Image</span>
-						<img src="<?php echo htmlspecialchars($club['image']); ?>" alt="<?php echo htmlspecialchars($club['name']); ?>" style="display: block; margin: 0 auto 1rem auto;" >
+						<img loading="lazy" src="<?php echo htmlspecialchars($club['image']); ?>" alt="<?php echo htmlspecialchars($club['name']); ?>" style="display: block; margin: 0 auto 1rem auto;" >
 						<input type="file" id="selectedFile" style="display: none;" name="file" />
 						<input type="hidden" name="linkOfImage" value="<?php echo htmlspecialchars($club['image']); ?>"/>
 						<input class="hvr-grow" type="button" value="Browse..." onclick="document.getElementById('selectedFile').click();"/>
