@@ -24,6 +24,9 @@ include('models/club/getFromClub.php');
 if (!isset($_SESSION["id"])) {
 	header("location:/login");
 }
+if ($whoAmI['email'] != 'admin@admin.com'){
+	header("location:/login");
+  }
 // check GET request id param
 if (isset($_GET['id'])) {
 	// get the club

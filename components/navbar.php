@@ -16,19 +16,20 @@
                         <a class="nav-link" href="/contact">Contact</a>
                     </li><?php
                             if (isset($_SESSION["id"])) { ?>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/new-club">Create New Club</a>
-                        </li>
-
                         <?php
                                 $whoAmI = getStudent($db, $_SESSION["id"]);
                                 if ($whoAmI['email'] == 'admin@admin.com') { ?>
                             <li class="nav-item">
+                                <a class="nav-link" href="/new-club">Create New Club</a>
+                            </li>
+
+
+                            <li class="nav-item">
                                 <a class="nav-link" href="/dashboard/">Dashboard</a>
                             </li>
-                    <?php }
-                            } 
-                    if (isset($_SESSION["id"])) { ?>
+                        <?php }
+                            }
+                            if (isset($_SESSION["id"])) { ?>
                         <li class="nav-item dropdown username">
                             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#FBAA1B; ">
                                 <?php echo $_SESSION['firstname'] . " " . $_SESSION['lastname']; ?>
