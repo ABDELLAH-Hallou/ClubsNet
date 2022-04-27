@@ -79,7 +79,7 @@ if (!isset($_SESSION["id"])) {
 						<div id="paypal-button-container"></div>
 
 						<!-- Include the PayPal JavaScript SDK -->
-						<script src="https://www.paypal.com/sdk/js?client-id=ASJ920rtwxVmDQOqqTSX-l8yxVnBWlOhGVWBP4uLBwjhr18_prdqsJ7vJNeLT7XhrpJs0QhZ_dXZFAjw&currency=USD"></script>
+						<script src="https://www.paypal.com/sdk/js?client-id=AVECUv19c2FdDz5W_0CHNiqtS2DbiFaEFdNbRTqJRZ8MQ-g2DsA_0k6TCusD30a-pPHZOE4mhLxM9M4A&currency=USD"></script>
 					</div>
 				</div>
 				<div class="test">

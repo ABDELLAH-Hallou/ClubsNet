@@ -63,7 +63,7 @@ include('controllers/club/feedback.php');
 </section>
 <?php include('components/footer_1.php'); ?>
 <!-- Include the PayPal JavaScript SDK -->
-<script src="https://www.paypal.com/sdk/js?client-id=ASJ920rtwxVmDQOqqTSX-l8yxVnBWlOhGVWBP4uLBwjhr18_prdqsJ7vJNeLT7XhrpJs0QhZ_dXZFAjw&currency=USD"></script>
+<script src="https://www.paypal.com/sdk/js?client-id=AVECUv19c2FdDz5W_0CHNiqtS2DbiFaEFdNbRTqJRZ8MQ-g2DsA_0k6TCusD30a-pPHZOE4mhLxM9M4A&currency=USD"></script>
 <script>
     let price = document.getElementById("price").value/10;
     // Render the PayPal button into #paypal-button-container
